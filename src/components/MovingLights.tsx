@@ -8,6 +8,7 @@ type Props = {
 
 const MovingLights = ({positions = [2, 0, 2, 0, 2, 0, 2, 0]}: Props) => {
   const group = useRef<ReactNode>(null)
+  
   useFrame((_, delta) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore

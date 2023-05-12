@@ -8,7 +8,7 @@ import {render} from 'react-dom'
 
 // import studio from "@theatre/studio";
 // import extension from "@theatre/r3f/dist/extension";
-//
+
 // studio.extend(extension);
 // studio.initialize();
 

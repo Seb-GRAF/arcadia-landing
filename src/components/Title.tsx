@@ -2,7 +2,7 @@ const Title = () => {
 
   return (
     <div
-      className="title fixed inset-0 pointer-events-none flex flex-col items-center justify-center gap-[10vw] mb-6 sm:mb-12 lg:mb-28">
+      className="title fixed inset-0 pointer-events-none flex flex-col items-center justify-center gap-[10vw] mb-4">
       <h1
         className="text-white max-sm:text-5xl sm:text-[10vw] z-10 w-screen text-center overflow-hidden font-bold">
         <span className="block translate-y-full transition-transform duration-1000 ease-in-out">
