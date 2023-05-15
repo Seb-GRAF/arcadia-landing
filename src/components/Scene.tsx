@@ -27,6 +27,7 @@ const Scene = () => {
 
     // Messy, need to figure out a way how to do this with the theatreJs
     const title = document.querySelector('.title');
+    const video = document.querySelector('#myVideo');
 
     sheet.sequence.position < 5 ? setIsIntroVisible(true) : setIsIntroVisible(false)
 
@@ -37,12 +38,19 @@ const Scene = () => {
     } else {
       title.classList.remove('reveal')
     }
+
+    if (!video) return;
+    if (sheet.sequence.position >= 27.8) {
+      video.classList.add('reveal')
+    } else {
+      video.classList.remove('reveal')
+    }
   });
 
   return (
     <>
       <Float
-        rotationIntensity={0.2} floatIntensity={2} speed={2}>
+        rotationIntensity={0.2} floatIntensity={2} speed={3}>
         <ArcadiaShip/>
       </Float>
 
@@ -70,7 +78,7 @@ const Scene = () => {
         <Text ref={introTextRef} position={[0, 1, 0]} color="white" anchorX="center" anchorY="middle" fontSize={1.5} frustumCulled={false}>Une nouvelle aventure commence...</Text>
       </group>
       
-      <Stars radius={20} depth={100} count={3000} factor={5} fade saturation={10}/>
+      <Stars radius={30} depth={100} count={3000} factor={5} fade saturation={10}/>
 
       {/* TheatreJS mesh for the camera to look at */}
       <e.mesh theatreKey="Camera Target" visible="editor" ref={cameraTargetRef}>

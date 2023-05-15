@@ -31,3 +31,11 @@ body {
 .title.reveal h2 > span {
   @apply delay-200;
 }
+
+video.reveal {
+  @apply opacity-100;
+}
+
+video.play {
+  @apply pointer-events-none;
+}
