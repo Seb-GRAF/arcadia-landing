@@ -26,30 +26,33 @@ const App = () => {
 
   return (
     <>
-      <Canvas shadows dpr={[1, 2]} camera={{position: [-10, 0, 15], fov: 30}}
-              gl={{preserveDrawingBuffer: true}}>
+      <Canvas shadows dpr={[1, 2]} camera={{ position: [-10, 0, 15], fov: 30 }}
+        gl={{ preserveDrawingBuffer: true }}>
         <ScrollControls pages={10} damping={20}>
           <SheetProvider sheet={sheet}>
-            <Scene/>
+            <Scene />
           </SheetProvider>
           <Scroll html>
-                <div
+            <div
               className="px-16 relative top-[250vh] w-screen sm:w-[50vw] flex flex-col gap-24 text-xl p-4 items-center sm:text-3xl">
-              <p className="max-w-[40rem] leading-normal">Un vaisseau d’une puissance et d’une
-                grâce inégalées, une merveille d’ingénierie.</p>
+              <p className="max-w-[40rem] leading-normal">Notre vaisseau le Rocinante a fait son temps.
+                Pour explorer les tréfonds de la galaxie, nous avons besoin de plus grand, de plus ambitieux.
+                Quels secrets se cachent à l’intérieur de ses murs ?
+                Quelles aventures attendent ceux qui auront le courage de rejoindre son
+                équipage ?</p>
             </div>
             <div
               className="px-16 relative top-[600vh] sm:top-[700vh] w-screen sm:w-[50vw] flex flex-col gap-24 text-xl p-4 items-center sm:text-3xl">
               <p className="max-w-[40rem] leading-normal">
-                Quels secrets se cachent à l’intérieur de ses murs ? Quelles
-                aventures attendent ceux qui auront le courage de rejoindre son
-                équipage ? Seul le temps le dira…
+                Quelles aventures attendent ceux qui auront le courage de rejoindre son
+                équipage ? Il est temps de vous présenter notre nouvelle navette.
+                Une merveille d'ingénierie, tout droit sortie de l'imaginaire de Leiji Matsumoto.
               </p>
             </div>
           </Scroll>
         </ScrollControls>
       </Canvas>
-      <Title/>
+      <Title />
       {!hasStarted && (
         <div className="fixed inset-0 w-screen h-screen bg-black z-50 pointer-events-none text-whites flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
